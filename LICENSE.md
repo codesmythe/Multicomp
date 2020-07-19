@@ -1,3 +1,10 @@
+# Rienk Koolstra's Mulitcomp Extensions
+
+Rienk Koolstra extended Grant Searle's Multicomp in various 
+ways, as documented [here](https://www.retrobrewcomputers.org/doku.php?id=builderpages:rhkoolstar:mc-2g-1024).
+
+Rienk's download on RetroBrewComputers.org does not specify a particular license for his work. Since Grant's Multicomp license specifies that derivatives must be freely available, I assume Rienk's 
+Multicomp extensions are licensed the same as the original Multicomp.
 
 # Grant Searle's original Multicomp
 

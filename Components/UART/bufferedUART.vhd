@@ -104,15 +104,15 @@ begin
 	-- RTS with hysteresis
 	-- enable flow if less than 2 characters in buffer
 	-- stop flow if greater that 8 chars in buffer (to allow 8 byte overflow)
+	-- Updated by MJS to enable control of RTS via the control register bits 5 and 6
+	
 	process (clk)
 	begin
 		if falling_edge(clk) then
-			if rxBuffCount<2 then
-				n_rts <= '0';
-			end if;
-			if rxBuffCount>8 then
-				n_rts <= '1';
-			end if;
+			if (controlReg(6)='1' and controlReg(5)='0') then n_rts <= '1';
+			elsif rxBuffCount<2 then n_rts <= '0';
+			elsif rxBuffCount>8 then n_rts <= '1';
+	 		end if;
 		end if;
 	end process;
 		
