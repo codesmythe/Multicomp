@@ -147,12 +147,12 @@ set_global_assignment -name CDF_FILE output_files/Microcomputer.cdf
 set_global_assignment -name VHDL_FILE ../Components/SDCARD/sd_controller.vhd
 set_global_assignment -name QIP_FILE ../ROMS/6502/M6502_BASIC_ROM.qip
 set_global_assignment -name QIP_FILE ../ROMS/Z80/Z80_BASIC_ROM.qip
-set_global_assignment -name QIP_FILE ../Components/TERMINAL/DisplayRam1K.qip
+set_global_assignment -name VHDL_FILE ../Components/TERMINAL/DisplayRam1K.vhd
 set_global_assignment -name CDF_FILE output_files/m6502.cdf
-set_global_assignment -name QIP_FILE ../Components/TERMINAL/DisplayRam2K.qip
+set_global_assignment -name VHDL_FILE ../Components/TERMINAL/DisplayRam2K.vhd
 set_global_assignment -name QIP_FILE ../Components/TERMINAL/CGABoldRomReduced.qip
-set_global_assignment -name QIP_FILE InternalRam1K.qip
-set_global_assignment -name QIP_FILE InternalRam2K.qip
-set_global_assignment -name QIP_FILE InternalRam4K.qip
+set_global_assignment -name VHDL_FILE InternalRam1K.vhd
+set_global_assignment -name VHDL_FILE InternalRam2K.vhd
+set_global_assignment -name VHDL_FILE InternalRam4K.vhd
 set_global_assignment -name QIP_FILE ../ROMS/6809/M6809_EXT_BASIC_ROM.qip
 set_global_assignment -name QIP_FILE ../ROMS/Z80/Z80_CPM_BASIC_ROM.qip
