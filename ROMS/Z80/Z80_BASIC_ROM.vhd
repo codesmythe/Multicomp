@@ -1,8 +1,11 @@
--- This ROM file has been automatically generated from the HEX file.
+-- This ROM file has been automatically generated from the HEX file BASIC.HEX
+--     command: hex2vhdl.tcl Z80_BASIC_ROM 8192 BASIC.HEX
 -- Do not edit.
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
 ENTITY Z80_BASIC_ROM IS
 PORT
 (
@@ -531,4 +534,11 @@ ARCHITECTURE SYN OF Z80_BASIC_ROM IS
         X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00", X"00"
 
     );
-END SYN
+BEGIN
+    PROCESS(clock)
+    BEGIN
+        IF rising_edge(clock) THEN
+            q <= ROM(conv_integer(address));
+        END IF;
+    END PROCESS;
+END SYN;
